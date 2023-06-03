@@ -9,17 +9,52 @@
 <body>
     
     <main>
-        <h2>Registro de tareas</h2>
-
-        <label for="">Nombre</label>
-        <input type="text" id="nombre">
-        <label for="">Descripción</label>
-        <input type="text" id="descripcion">
-        <label for="">Fecha Inicio</label>
-        <input type="text" id="fecha">
-        <label for="">Estado</label>
-        <input type="text" id="country" list="country_list">
+        <h1>Lista de Tareas</h1>
+  
+  <div>
+    <label for="nombre">Nombre de la Tarea:</label>
+    <input type="text" id="nombre" />
+  </div>
+  
+  <div>
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" />
+  </div>
+  
+  <div>
+    <label for="fechaInicio">Fecha de Inicio:</label>
+    <input type="date" id="fechaInicio" />
+  </div>
+  
+  <div>
+    <label for="estado">Estado:</label>
+    <select id="estado">
+        <option value="Iniciado">Iniciado</option>
+        <option value="En Curso">En Curso</option>
+        <option value="Pendiente">Pendiente</option>
+        <option value="Finalizado">Finalizado</option>
+      </select>
+  </div>
+  
+  
+  <button onclick="agregarTarea()">Agregar Tarea</button>
+  <button onclick="eliminarTarea()" title="Para eliminar una Tarea, solo se debe ingresar un nombre de tarea valido de la lista">Eliminar Tarea</button>
+  <button onclick="limpiarCampos()">Limpiar campos</button>
+  <button onclick="limpiarLocalStorage()()">Borrar Local Storage</button>
+  
+  <table id="tablaTareas">
+    <thead>
+      <tr>
+        <th>Nombre de la Tarea</th>
+        <th>Descripción</th>
+        <th>Fecha de Inicio</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
     </main>
+
     <script src="main.js">
 
     </script>
